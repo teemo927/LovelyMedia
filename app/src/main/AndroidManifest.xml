@@ -3,6 +3,7 @@
     package="com.teem.lovelymedia">
 
     <application
+        android:name=".AppApplication"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
