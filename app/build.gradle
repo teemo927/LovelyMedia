@@ -24,6 +24,12 @@ android {
     dataBinding {
         enabled = true
     }
+
+    //The dependency(com.youth.banner:banner) contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -31,6 +37,7 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -41,4 +48,11 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     testImplementation "androidx.room:room-testing:$room_version"
+
+    //banner
+    def banner_version = "2.0.10"
+    implementation "com.youth.banner:banner:$banner_version"
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
